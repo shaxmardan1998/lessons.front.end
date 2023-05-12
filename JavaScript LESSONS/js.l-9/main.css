@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    padding: 20px;
+    background-color: green;
+    color: white;
+}
+.box.active {
+    background-color: red;
+    color: #fff;
+}
+
+#users {
+    list-style: none;
+    background-color:coral;
+    min-height: 300px;
+    width: 100%;
+    padding: 1rem;
+}
+
+#users li {
+    background-color: green;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 40px;
+}
+
+#hitxt {
+    color: red;
+}

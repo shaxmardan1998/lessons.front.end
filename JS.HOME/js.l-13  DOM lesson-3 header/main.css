@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(blueviolet, white);
+}
+.container .navbar {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 5px solid #fff;
+}
+.container .navbar .logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+.container .navbar .menu {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+}
+.container .navbar .menu .abc {
+    display: none;
+}
+.container .navbar .menu li .btn i {
+    color: #fff;
+}
+.container .navbar .menu li a {
+    color: #fff;
+    font-weight: 500;
+}
+.container .navbar .menu li a:hover{
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+    padding: 5px 0;
+    transition: .1s ease;
+    color: #fff;
+    transition: .1s ease;
+}
+.container .navbar .icon {
+    font-size: 40px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+.container .navbar .icon:hover {
+    transition: .1s ease;
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
+    color: #fff;
+}
+@media screen and (max-width: 768px) {
+    .container .navbar .menu {
+        position: fixed;
+        width: 35%;
+        height: 500px;
+        margin-top: 30px;
+        left: 30px;
+        background-color:blueviolet;
+        border:3px solid #111;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        top: -100%;
+        border-radius: 40px;
+        justify-content: center;
+        text-align: center;
+        z-index: 0;
+        transition: 1.2s ease;
+    }
+    .container .navbar .menu .abc {
+        display: block;
+    }
+    .container .navbar .menu .abc .abc1 {
+        position: absolute;
+        font-size: 18px;
+        font-weight: 600;
+        top: 15px;
+        left: 25px;
+        color: #fff;
+    }
+    .container .navbar .menu .abc .camera {
+        position: absolute;
+        width: 87px;
+        height: 23px;
+        border-radius: 10px;
+        background-color: #111;
+        top: 15px;
+        left: 82px;
+    }
+    .container .navbar .menu .abc .wi-fi {
+        position: absolute;
+        color: #fff;
+        top: 15px;
+        left: 175px;
+    }
+    .container .navbar .menu .abc .email {
+        position: absolute;
+        top: 425px;
+        font-size: 30px;
+        left: 10px;
+        display: flex;
+        gap: 20px;
+        background-color: #fff;
+        padding: 10px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .container .navbar .menu .abc .email i {
+        background-color: #778899;
+        padding: 3px 5px;
+        border-radius: 10px;
+        color: #262626;
+    }
+    .container .navbar .menu .abc .email .one {
+        background-color: green;
+        color: #fff;
+    }
+    .container .navbar .menu .abc .email .two {
+        background-color: green;
+        color: #fff;
+    }
+    .container .navbar .menu .abc .tel {
+        display: flex;
+        position: absolute;
+        gap: 8px;
+        cursor: pointer;
+        top: 80px;
+        left: 9px;
+    }
+    .container .navbar .menu .abc .tel .twitter {
+        font-size: 30px;
+        color: #fff;
+        padding: 7px 12px;
+        border-radius: 10px;
+        background-color: #1CA1F2;
+    }
+    .container .navbar .menu .abc .tel .twitterone {
+        font-size: 30px;
+        color: #fff;
+        padding:7px 12px;
+        background-color: blue;
+        border-radius: 10px;
+    }
+    .container .navbar .menu .abc .tel .twittertwo {
+        font-size: 30px;
+        color: #fff;
+        padding:7px 12px;
+        background-color: green;
+        border-radius: 10px;
+    }
+    .container .navbar .menu .abc .tel .twitterthree {
+        font-size: 30px;
+        color: #fff;
+        padding:7px 12px;
+        background-color: #1CA1F2;
+        border-radius: 10px;
+    }
+    .container .navbar .icon {
+        display: block;
+    }
+    .container .navbar .menu.active {
+        top: 0;
+    }
+    .container .navbar .menu li {
+        width: 100%;
+    }
+    .container .navbar .menu .menu-li .menu-p {
+        display: block;
+        color: #fff;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .container .navbar .menu .menu-li p.active {
+        display: block;
+    }
+}

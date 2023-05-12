@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: color .3s ease;
+}
+/* light theme */
+:root {
+    --bg-color: #bdc8d3;
+    --light-text-color: #fff;
+    --black-text-color: #111827;
+    --container-color: #1f2937;
+    --overlay-color: rgba(0, 0, 0, 0.2);
+    --red-color: #ff5550;
+}
+/* dark theme */
+body.dark {
+    --bg-color: #0f172a;
+    --light-text-color: #fff;
+    --black-text-color: #fff;
+    --overlay-color: rgba(255, 255, 255, 0.2);
+    --red-color: #ff5550;
+}
+body {
+    background-color: var(--bg-color);
+    transition: background-color 0.3s ease;
+}
+.container {
+    background-color: var(--container-color);
+    width: 50%;
+    margin: 100px auto;
+    padding: 2rem;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 10px 12px rgba(0, 0, 0, 0.2);
+}
+.container form {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.container form input {
+    background-color: var(--overlay-color);
+    padding: 8px 12px;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--light-text-color);
+    font-size: 18px;
+}
+.container form button {
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    font-size: 24px;
+    border: none;
+    outline: none;
+    color: var(--light-text-color);
+    cursor: pointer;
+}
+.list {
+    display: flex;
+    gap: 10px;
+    margin-top: 2rem;
+}
+.list li {
+    padding: 15px 25px ;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--light-text-color);
+    border-radius: 6px;
+}
+.list li button {
+    padding: 8px 10px;
+    background-color: var(--red-color);
+    color: var(--light-text-color);
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+.changer-mode {
+    display: flex;
+    font-size: 25px;
+    font-family: sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30%;
+    cursor: pointer;
+    background-color: #fff;
+    position: absolute;
+    padding: 20px;
+    top: 50px;
+    overflow-y: auto;
+    right: 100px;
+}
+.changer-mode .sun {
+    position: absolute;
+    top: -30px;
+    color:var(--red-color);
+    transition: .5s ease;
+}
+.changer-mode .sun.sun-bxs{
+    top: 7px;
+    position: absolute;
+}
+.changer-mode .moon {
+    position: absolute;
+    top: 8px;
+    transition: .5s ease;
+
+}
+.changer-mode .moon.moon-bxs {
+    position: absolute;
+    top: -30px;
+}

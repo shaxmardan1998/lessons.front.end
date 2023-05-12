@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./js/tailwind.config.js"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <title>Food</title>
+</head>
+
+<body id="body-gif">
+    <div class='wrapper flex h-screen w-full bg-slate-.100'>
+    <div id="sidebar" class="sidebar md:w-[350px] sm:hidden sm:fixed 50 sm:w-full sm:h-screen 
+    md:block md:sticky  bg-white shadow-md p-4 sticky top-0 overflow-y-auto">
+      <ul id='categories' class='w-full flex flex-col gap-4'>
+
+      </ul>
+    </div>
+    <div class='main p-4 w-full h-screen sticky top-0  overflow-y-auto'>
+      <h1  class='heading text-3xl sticky top-0  text-slate-600 font-bold 
+      x-6 py-4 bg-white rounded-md shadow-md w-full sm:sticky md:relative flex justify-between items-start'>
+        <span id="category-name">Loading...</span>
+        <i id="sidebar-btn" class='bx bx-food-menu cursor-pointer md:hidden'></i>
+      </h1>
+
+      <div id="main" class="row grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4 gap-4">
+        <div class="gif w-full h-screen items-center justify-center.">
+          <img src="./loader-2_food.gif" width="300px" alt="">
+        </div>
+        <!-- single meal item started -->
+
+        <!-- <div
+          class="item bg-white shadow-md p-4 rounded-md cursor-pointer flex items-center justify-center gap-4 flex-col">
+          <img class='rounded-md' src="https://picsum.photos/400" alt="">
+          <h1>Beef</h1>
+        </div> -->
+
+        <!-- single meal item ended -->
+      </div>
+    </div>
+    </div>
+  <script src="./js/app.js"></script>
+</body>
+</html>

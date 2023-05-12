@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	position: relative;
+}
+
+.heading::after {
+	content: '';
+	position: absolute;
+	height: 4px;
+	width: 70px;
+	border-radius: 10px;
+	background-color: #ff6551;
+	top: -20px;
+}
+
+.heading span {
+	color: #ff6551;
+}
+
+.heading h1 {
+	color: black;
+	font-size: 40px;
+}
+
+.heading p {
+	font-weight: lighter;
+	color: gray;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+}
+
+.row .col {
+	flex: 1;
+}
+
+header {
+	width: 100%;
+	height: 100vh;
+	background-image: url('./bg.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+header .left,
+header .right {
+	position: absolute;
+	top: 0;
+	z-index: 0;
+}
+
+.left {
+	left: 0;
+}
+
+.right {
+	right: 0;
+}
+
+header nav {
+	width: 100%;
+	padding: 20px 10%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__left {
+	display: flex;
+	gap: 80px;
+	align-items: center;
+}
+
+.nav__left ul {
+	display: flex;
+	gap: 15px;
+	list-style: none;
+}
+
+.nav__right {
+	display: flex;
+	align-items: center;
+	gap: 45px;
+}
+
+.btn {
+	background-color: #ff6551;
+	padding: 10px 20px;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 8px;
+	color: #fff;
+	z-index: 1;
+}
+
+.content {
+	width: 80%;
+	margin: 120px auto 0 auto;
+}
+
+.content h1 {
+	margin: 20px 0 35px 0;
+	font-size: 58px;
+}
+
+.content p {
+	font-weight: lighter;
+	color: gray;
+
+	margin-bottom: 20px;
+}
+
+/* teachers page styles */
+.teachers .heading {
+	margin: 150px 0;
+}
+
+.teachers .row {
+	margin-bottom: 150px;
+}
+
+.teachers .row .col img {
+	width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+	header {
+		min-height: 100vh;
+	}
+
+	header nav .menu,
+	header nav .nav__right {
+		display: none;
+	}
+
+	.content {
+		width: 100%;
+		padding: 0 1rem;
+	}
+
+	.row {
+		flex-direction: column;
+		gap: 2rem;
+	}
+}

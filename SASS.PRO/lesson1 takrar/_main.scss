@@ -1,0 +1,86 @@
+@import "variables";
+@import "mixin";
+
+.main{
+    background-color: $lighBg;
+    min-height: 100vh;
+    &__item{
+        display: flex;
+        flex-direction: column;
+        &-container{
+            display: flex;
+        }
+        &-item-img{
+            margin-top: 140px;
+        }
+        &-item-text{
+            height: 100vh;
+            margin-top: 130px;
+            h6{
+                color: white;
+                font-size: 39.06px;
+                font-weight: 600;    
+            }
+            p{
+                margin-top: 18px;
+                font-size: 16px;
+                font-weight: 400;
+                color: #fff;
+            }
+            
+        }
+    }
+
+    &__item2{
+        &-container{
+            flex-direction: column;
+        }
+
+        &-item-logo{
+            display: flex;
+            margin-top: 10px;
+            gap: 30px;
+            .icon{
+                text-align: center;
+                padding-bottom: 21px;
+                background-color: $lighBg;
+                height: 200px;
+                width: 270px;
+                i{
+                    background-color:#7B7B7B;
+                    border-radius: 50%;
+                    padding: 23px;
+                    margin-top: 25px;
+                    font-size: 25px;
+                }
+                p{
+                    margin-top: 36px;
+                    color: #fff;
+                    padding:0 46px;
+                }
+            }
+            .icon1 i{
+                background-color: $orenge;
+                color: #fff;
+                box-shadow: 4px 5px 15px rgba(255, 83, 0, 0.4);
+            }
+            .icon2 i{
+                color: #fff;
+                box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.4);
+            }
+            .icon3 i{
+                color: #fff;
+                background-color: #00ACFF;
+                box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.4);
+            }
+            .icon4 i{
+                color: #fff;
+                background-color: #242526;
+                box-shadow: 4px 5px 15px rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+        
+}
+
+    

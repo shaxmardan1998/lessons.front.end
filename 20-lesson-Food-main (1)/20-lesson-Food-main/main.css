@@ -1,0 +1,9 @@
+.main {
+    height: 100vh;
+    overflow: auto;
+}
+
+.row {
+    width: 100%;
+    overflow-y: auto;
+}

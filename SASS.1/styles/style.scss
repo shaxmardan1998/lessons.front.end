@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+$logocolor:#C4C4C4;
+$menucolor: #1E266D;
+$btncolor: #3751FF;
+$txtcolor: #455880;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.img{
+    max-width: 100px;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.container .header{
+    display: flex;
+    justify-content: space-between;
+}
+.header{
+    height: 80px;
+    align-items: center;
+    &__left{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    &__logo{
+        color: $menucolor;
+        font-size: 31px;
+        font-weight: 600;
+        span{
+            color: red
+        }
+    }
+    &__menu{
+        display: flex;
+        gap: 30px;
+        color: $menucolor;
+        font-size: 16px;
+        font-weight: 400;
+        li{
+            a{
+                &:hover{
+                    color: $btncolor;
+                    transition: all .5s ease;
+                }
+            }
+        }
+    }
+    &__right{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+    &__number{
+        color: $menucolor;
+    }
+    &__btn{
+        padding: 10px 20px; 
+        background-color: $btncolor;
+        border: none;
+        color: white;
+        border-radius: 50px;
+        cursor: pointer;
+        &:hover{
+            background-color: white;
+            color: $btncolor;
+            transition: all .7s ease-in-out;
+        }
+    }
+    &__icon{
+        font-size: 30px;
+        color: $menucolor;
+        display: none;
+    }
+}
+.item{
+    background:linear-gradient(180deg, rgba(242, 249, 255, 0.12) 0%, #F2F9FF 100%);
+    height: 878px;
+    .container{
+        &__txt{
+            padding-top: 144px;
+            text-align: center;
+            font-size: 56px;
+            font-weight: 500;
+            color: $menucolor;
+            line-height: 105%;
+            p{
+                font-size: 18px;
+                margin-top: 27px;
+                font-weight: 400;
+                color: $txtcolor;
+            }
+        }
+        &__twobtn{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 27px;
+            .one{
+                background-color: $btncolor;
+                border: none;
+                padding: 15px 30px;
+                border-radius: 100px;
+                color: white;
+                font-size: 16px;
+                font-weight: 400;
+                cursor: pointer;
+                &:hover{
+                    background-color: white;
+                    color: $btncolor;
+                    transition: all .7s ease-in-out;
+                }
+            }
+            .two{
+                padding: 15px 30px;
+                background-color:#fff;
+                border-radius: 100px;
+                color: $txtcolor;
+            }
+        }
+        &__img{
+            display: flex;
+            justify-content: center;
+            max-width: 100%;
+        }
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .home{
+        .container{
+            .header{
+                &__menu{
+                    display: none;
+                }
+                &__right{
+                    display: none;
+                }
+                &__icon{
+                    display: flex;
+                }
+            }
+        }
+    }
+    .item{
+        .container{
+            &__img{
+                max-width: 100%;
+            }
+            &__twobtn{
+                flex-direction: column;
+            }
+        }
+    }
+}

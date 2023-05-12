@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #262626;
+}
+.header{
+    min-height: 100vh;
+    background-color: wheat;
+    .container{
+        .header__logo{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100px;
+            .header__left{
+                font-size: 35px;
+                font-weight: 600;
+                span{
+                    color: coral;
+                }
+            }
+            .header__right{
+                display: flex;
+                .header__menu{
+                    display: flex;
+                    gap: 25px;
+                    font-size: 22px;
+                    font-weight: 400;
+                    :hover{
+                        color: coral;
+                        transition:all .3s ease;
+                    }
+                }
+            }
+            form{
+                label{
+                    input{
+                        padding: 10px;
+                        border: none;
+                        border-radius: 4px;
+                        width: 300px;
+                    }
+                }
+            }
+        }
+        .header__main{
+                .header__one{
+                    display: flex;
+                    gap: 24px;
+                    align-items: center;
+                    .header__text{
+                        h6{
+                            font-size: 35px;
+                            font-weight: 700;
+                            color: #737373;
+                        }
+                        p{
+                            margin-top: 24px;
+                            color: #737373;
+                        }
+                        .btn{
+                            margin-top: 24px;
+                            font-size: 20px;
+                            font-weight: 500;
+                            color: #fff;
+                            padding: 10px 22px;
+                            background-color: #FF5300;
+                            border: none;
+                            border-radius: 5px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            
+        }
+    }
+    
+}
+@media screen and (max-width:768px) {
+    .header{
+        .container{
+            .header__logo{
+                flex-direction: column;
+                gap: 20px;
+            }
+            .header__main{
+                margin-top: 70px;
+                .header__one{
+                    flex-direction:column-reverse;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

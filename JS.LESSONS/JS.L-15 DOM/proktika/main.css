@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+    background-color: #778899;
+    box-sizing: border-box;
+}
+.container {
+    width: 80%;
+    height: 80vh;
+    margin: 10px auto;
+    background-color: #fff;
+}
+
+.container .form {
+    width: 100%;
+    padding: 2rem;
+    background-color: #778899;
+    display: flex;
+    gap: 2rem;
+    border: none;
+    outline: none;
+}
+
+.container .form input {
+    padding: 1rem 2rem;
+    font-size: 15px;
+    
+}
+
+.container .form button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #fff;
+    background-color: #778899;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.container .form button:hover{
+    background-color: #fff;
+    color: #778899;
+}
+.container .table-content {
+    overflow-y: auto;
+    max-height: 400px;
+    width: 100%;
+}
+
+.container .table-content table {
+    width: 100%;
+}
+table thead {
+    background-color:#778899;
+    top: 0;
+    position: sticky;
+}
+table thead tr td {
+    padding: 10px 20px ;
+    color: #fff;
+}
+
+table tbody tr td {
+    padding: 10px 20px;
+    border-bottom: 2px solid #778899; 
+}
+@media screen and (max-width: 500px) {
+    .container .form {
+        flex-direction: column;
+        display: flex;
+    }
+    .container .table-content table thead tr{
+        flex-direction: column;
+        display: flex;
+    }
+}

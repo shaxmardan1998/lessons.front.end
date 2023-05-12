@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$bgColor: #252B42;
+$primaryColor: #23A6F0;
+$dangerColor: #E74040;
+$successColor: #2DC071;
+$textColor: #252B42;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 15px 25px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: $primaryColor;
+  color: #fff;
+}
+
+.btn-outlined {
+  background-color: transparent;
+  border: 2px solid $primaryColor;
+  color: $primaryColor;
+}
+
+.btn-rounded {
+  border-radius: 40px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+// home styles started
+.home {
+  min-height: 100vh;
+  background-color: $bgColor;
+
+  .container {
+    .header {
+      padding: 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__left {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+      }
+
+      &__logo {
+        color: #fff;
+      }
+
+      &__menu {
+        display: flex;
+        gap: 20px;
+
+        li {
+          a {
+            color: #fff;
+            font-weight: 700;
+            transition: 0.3s ease;
+
+            &:hover {
+              color: $primaryColor;
+            }
+          }
+        }
+      }
+
+      &__right {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+
+        a {
+          color: #fff;
+          font-weight: 700;
+        }
+      }
+
+      &__icons {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        display: none;
+      }
+
+      &__icon {
+        color: #fff;
+        font-size: 24px;
+      }
+
+      &__menu-toggler {
+        display: none;
+        i {
+          color: #fff;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .home {
+    .container {
+      .header {
+        &__menu {
+          display: none;
+        }
+
+        &__menu-toggler {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home {
+    .container {
+      .header {
+        &__right {
+          display: none;
+        }
+
+        &__icons {
+          display: inline;
+        }
+
+        &__menu-toggler {
+          display: none;
+        }
+      }
+    }
+  }
+}

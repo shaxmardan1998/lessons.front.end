@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+    <title>Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind.config.js"></script>
+</head>
+<body>
+    <section class="min-h-[100vh] bg-bgColor">
+
+    <div class="flex bg-bgColor items-center min-h-[80px]">
+        <div class="flex justify-between items-center w-[80%] mx-auto">
+
+           <div class="flex items-center gap-10">
+            <span class="font-bold text-fontColor text-2xl">BrandName</span>
+            <ul  class="flex gap-5 hidden md:flex lg:flex">
+                <li><a class="text-txtColor hover:text-black transition duration-300 ease" href="#">Home</a></li>
+                <li><a class="text-txtColor hover:text-black transition duration-300 ease" href="#">Product</a></li>
+                <li><a class="text-txtColor hover:text-black transition duration-300 ease" href="#">Pricing</a></li>
+                <li><a class="text-txtColor hover:text-black transition duration-300 ease" href="#">Contact</a></li>
+            </ul>
+           </div>
+
+           <div class="flex items-center hidden md:flex lg:flex gap-5">
+            <div class="text-btnColor font-semibold cursor-pointer">Login</div>
+            <button class="bg-btnColor px-[15px] rounded-md text-white py-[8px] hover:bg-green-700 transition duration-300">JOIN US</button>
+           </div>
+           <span class="text-2xl cursor-pointer flex text-fontColor md:hidden lg:hidden"><i class='bx bx-menu'></i></span>
+        </div>
+
+    </div>
+
+    <div class="w-[80%] mx-auto max-md:flex-col max-md:text-center flex items-center justify-between">
+
+        <div class="mt-[50px] grid gap-[10px]">
+            <div class="text-btnColor">Welcome</div>
+            <div class="font-bold text-fontColor text-3xl">Best Learning <br> Opportunities </div>
+            <div class="text-txtColor">Our goal is to make online <br> education work for everyone</div>
+            <div class="max-lg:flex-col">
+                <button class="rounded-md py-[10px] text-white px-[30px] bg-btnColor">Join Us</button>
+                <button class="border-2 text-btnColor py-[8px] px-[10px] rounded-md">Learn More</button>
+            </div>
+        </div>
+
+        <div><img src="./images/none (2).png" width="360px" alt="foto"></div>
+    </div>
+    </section>
+</body>
+</html>

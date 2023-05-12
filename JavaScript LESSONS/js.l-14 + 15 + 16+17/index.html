@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./main.css">
+    <title>lesson-15</title>
+</head>
+<body class="flex flex-col w-full h-[100vh] items-center gap-2 justify-center bg-blue-500">
+
+    <div id="content" class="container flex w-full items-center  justify-center">
+
+        <form id="login-form" class="w-[500px] flex flex-col gap-4 p-6 shadow-md rounded-md">
+            <input
+                id="loginPhone"
+                class="w-full border-none outline-none px-4 py-2 rounded-md border border-slate-200"
+                placeholder="Enter your phone..."
+                type="text"
+                required
+            />
+            <input
+            id="loginPassword"
+                class="w-full border-none outline-none px-4 py-2 mb-2 rounded-md border border-slate-200"
+                placeholder="Password..."
+                type="password"
+            />
+            <button class="px-4 py-2 w-full text-white bg-blue-500 border-2 rounded-md shadow-md">Sign up</button>
+        </form>
+
+        <form id="register-form" class="w-[500px] flex flex-col gap-4 p-6 shadow-md rounded-md">
+            <input
+                id="registerPhone"
+                class="w-full border-none outline-none px-4 py-2 rounded-md border border-slate-200"
+                placeholder="Enter your phone..."
+                type="text"
+                required
+            />
+
+            <input
+                id="registerName"
+                class="w-full border-none outline-none px-4 py-2 rounded-md border border-slate-200"
+                placeholder="Enter your name..."
+                type="text"
+                required
+            />  
+
+            <input
+            id="registerPassword"
+                class="w-full border-none outline-none px-4 py-2 mb-2 rounded-md border border-slate-200"
+                placeholder="Password..."
+                type="password"
+            />
+            <button class="px-4 py-2 w-full text-white border-2 bg-blue-500 rounded-md shadow-md">Register</button>
+        </form>
+        <div id="app" class="w-[500px] p-6 bg-white shadow-md rounded-md">
+            <h1 class="text-xl font-semibold text-slate-700 pb-2 border-b border-slate-200 flex justify-between items-cneter">
+                <span>Welcome,
+                    <span id="clientName" class="text-indigo-500">John</span>
+                    <span class="text-indigo-500">!</span>
+                </span>
+                <button 
+                id="logout"
+                class="text-xs px-4 py-2 bg-red-400 my-2 rounded-md shadow-md text-white">Logout</button>
+            </h1>
+            <!-- todo content -->
+
+            <form id="todo-form" class="w-full flex items-center p-2 gap-2 bg-indigo-200 rounded-md shadow-md">
+                <input id="todo-input" class="w-full p-2 border-none outline-none rounded-md"
+                 type="text"
+                 placeholder="Create any tasks...">
+                <button id="todo-btn" class="px-4 py-1 bg-indigo-500 text-white cutsor-pointer rounded-md shadow-md">Submit</button>
+            </form>
+            <!-- posts-menu -->
+            <div class=" bg-indigo-200 h-[350px] w-full overflow-auto mt-2 shadow-md rounded-md ">
+                <ul id="posts-menu" class="w-full flex flex-col text-white bg-gray-500 rounded-md shadow-md"></ul>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div id="controllers" class="controllers flex gap-2 bg-white shadow-md rounded-md border-2">
+        <button id="login-btn" class="px-4 py-2 transition duration-200  rounded-md">LOGIN</button>
+        <button id="register-btn" class="px-4 py-2 transition duration-200 rounded-md">RESIGTER</button>
+    </div>
+    
+    <script src="./app.js"></script>
+    <script src="./todos.js"></script>
+</body>
+</html>
